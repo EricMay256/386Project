@@ -76,4 +76,22 @@ public class EnemyManager : MonoBehaviour
       _timer -= 1f / _spawnsPerSecond;
     }
   }
+
+  public void ClearEnemies()
+  {
+    if (_usePooling)
+    {
+      foreach (Transform child in _enemyHolder)
+      {
+        _pool.Pool.Release(child.gameObject);
+      }
+    }
+    else
+    {
+      foreach (Transform child in _enemyHolder)
+      {
+        Destroy(child.gameObject);
+      }
+    }
+  }
 }

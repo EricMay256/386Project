@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController03 : MonoBehaviour
 {
@@ -6,6 +7,9 @@ public class PlayerController03 : MonoBehaviour
   EnemyManager _enemyManager;
   int _totalHealth = 100, _curHealth = 100;
   public float HealthPct => (float)_curHealth / _totalHealth;
+  [SerializeField]
+  Slider _healthBarSlider;
+  bool _isDead = false;
   // Start is called once before the first execution of Update after the MonoBehaviour is created
   void Start()
   {
@@ -17,6 +21,7 @@ public class PlayerController03 : MonoBehaviour
       Debug.LogError("EnemyManager not found");
       this.enabled = false;
     }
+    StartGame();
   }
 
   // Update is called once per frame
@@ -41,5 +46,20 @@ public class PlayerController03 : MonoBehaviour
     {
       Destroy(collision.gameObject);
     }
+    _curHealth -= 5;
+    _healthBarSlider.value = HealthPct;
+    if (_curHealth <= 0)
+    {
+      _curHealth = 0;
+      GameManager03.Instance.GameOver();
+    }
+  }
+
+  public void StartGame()
+  {
+    _curHealth = _totalHealth;
+    _healthBarSlider.value = HealthPct;
+    _isDead = false;
+    transform.position = Vector3.zero;
   }
 }
