@@ -71,4 +71,17 @@ MonoBehaviour:
       files are stored, you may wish to directly interact with the System.IO namespace.
     linkText: PlayerPrefs Reference
     url: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/PlayerPrefs.html
+  - heading: Prefabs
+    text: By dragging an object from the hierarchy to the project menu, you create
+      a reusable object reference called a Prefab. Prefabs have all components and
+      serialized field values saved, along with all child objects. This allows for
+      a great degree of reusability. Prefabs can be nested, meaning you can have
+      a prefab that uses and references other prefabs. Prefabs will have a blue box
+      icon instead of a clear box icon. By right clicking changed fields or components,
+      you can revert changes or apply them to the prefab object. When changing a
+      prefab object's fields, any instance of the prefab that has not assigned a
+      different value will be updated. You can separate an object from its associated
+      prefab by right clicking it and selecting Prefab>Unpack Completely
+    linkText: Prefab Reference
+    url: https://docs.unity3d.com/Manual/Prefabs.html
   loadedLayout: 0
