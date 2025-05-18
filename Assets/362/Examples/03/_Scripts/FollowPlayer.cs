@@ -4,18 +4,24 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
-    float _z;
-    [SerializeField]
-    Transform _player;
-    // Start is called before the first frame update
-    void Start()
+  float _z;
+  Transform _player;
+  // Start is called before the first frame update
+  void Start()
+  {
+    _z = transform.position.z;
+    _player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+    if (!_player)
     {
-        _z = transform.position.z;
+      Debug.LogError("Player not found");
+      this.enabled = false;
     }
+  }
 
-    // Update is called once per frame
-    void Update()
-    {
-        transform.position = new Vector3(_player.position.x, _player.position.y, _z);
-    }
+  // Update is called once per frame
+  void Update()
+  {
+    transform.position = new Vector3(_player.position.x, _player.position.y, _z);
+  }
+    
 }
