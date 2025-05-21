@@ -30,7 +30,11 @@ public class PlayerController03 : MonoBehaviour
     transform.position += new Vector3(
       PlayerInputManager.Instance.Movement.x,
       PlayerInputManager.Instance.Movement.y,
-      0) * Time.deltaTime * _moveSpeed;
+      0) * Time.deltaTime * _moveSpeed * Time.timeScale;
+    if (PlayerInputManager.Instance.PausePressed && !_isDead)
+    {
+      GameManager03.Instance.PauseGame();
+    }  
   }
 
   void OnTriggerEnter2D(Collider2D collision)

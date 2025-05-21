@@ -6,9 +6,10 @@ public class GameManager03 : MonoBehaviour
   [SerializeField]
   PlayerController03 _playerController;
   [SerializeField]
-  Canvas _gameOverCanvas;
+  Canvas _gameOverCanvas, _pauseCanvas;
   [SerializeField]
   EnemyManager _enemyManager;
+  bool _isPaused = false;
   // Start is called once before the first execution of Update after the MonoBehaviour is created
   void Start()
   {
@@ -50,5 +51,21 @@ public class GameManager03 : MonoBehaviour
     //Note: This will not work in the editor, but will work in a built game
     Application.Quit();
     Debug.Log("Quit Game");
+  }
+
+  public void PauseGame()
+  {
+    if (_isPaused)
+    {
+      Time.timeScale = 1;
+      _pauseCanvas.gameObject.SetActive(false);
+      _isPaused = false;
+    }
+    else
+    {
+      Time.timeScale = 0;
+      _pauseCanvas.gameObject.SetActive(true);
+      _isPaused = true;
+    }
   }
 }
