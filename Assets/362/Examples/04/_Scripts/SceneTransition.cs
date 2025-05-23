@@ -7,34 +7,41 @@ public class SceneTransition : MonoBehaviour
   string sceneName;
   void OnCollisionEnter(Collision collision)
   {
-    if (collision.gameObject.CompareTag("Player"))
-    {
-      SceneManager.LoadScene(sceneName);
-    }
+    Debug.Log($"Collision: {collision.gameObject.name}");
+    OpenSceneForPlayer(collision.gameObject);
   }
   void OnCollisionEnter2D(Collision2D collision)
   {
-    if (collision.gameObject.CompareTag("Player"))
-    {
-      SceneManager.LoadScene(sceneName);
-    }
+    Debug.Log($"Collision2D: {collision.gameObject.name}");
+    OpenSceneForPlayer(collision.gameObject);
   }
   void OnTriggerEnter(Collider other)
   {
-    if (other.CompareTag("Player"))
-    {
-      SceneManager.LoadScene(sceneName);
-    }
+    Debug.Log($"Trigger: {other.gameObject.name}");
+    OpenSceneForPlayer(other.gameObject);
   }
   void OnTriggerEnter2D(Collider2D other)
   {
-    if (other.CompareTag("Player"))
+    Debug.Log($"Trigger2D: {other.gameObject.name}");
+    OpenSceneForPlayer(other.gameObject);
+  }
+  void OnControllerColliderHit(ControllerColliderHit hit)
+  {
+    Debug.Log($"Trigger2D: {hit.gameObject.name}");
+    OpenSceneForPlayer(hit.gameObject);
+  }
+  public void OpenSceneForPlayer(GameObject player)
+  {
+    if (player.CompareTag("Player"))
+    {
+      TryOpenScene();
+    }
+  }
+  public void TryOpenScene()
+  {
+    if(sceneName != null && sceneName != "")
     {
       SceneManager.LoadScene(sceneName);
     }
-  }
-  public void TriggerTransition()
-  {
-    SceneManager.LoadScene(sceneName);
   }
 }

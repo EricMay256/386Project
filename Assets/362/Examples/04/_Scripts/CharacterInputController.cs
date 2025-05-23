@@ -6,7 +6,7 @@ public class CharacterInputController : MonoBehaviour
   CharacterController _characterController;
   Vector3 _move, _look;
   float _verticalRotation, _verticalRotationLimit = 85f;
-  [SerializeField] float _moveSpeed = 10f, _scaleFactor = 10f;
+  [SerializeField] float _moveSpeed = 10f;
   void Awake()
   {
 
@@ -16,12 +16,12 @@ public class CharacterInputController : MonoBehaviour
   {
     Vector2 move = value.Get<Vector2>();
     _move = new Vector3(move.x, 0, move.y);
-    Debug.Log($"Move: {_move}");
+    //Debug.Log($"Move: {_move}");
   }
   public void OnLook(InputValue value)
   {
     _look = value.Get<Vector2>();
-    Debug.Log($"Look: {_look}");
+    //Debug.Log($"Look: {_look}");
   }
   //Update is called once per frame
   void Update()
