@@ -225,10 +225,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69b6fd06ef1ebd2439cd5d3984a15069, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trackedTransform: {fileID: 1755372403}
-  TrackX: 1
-  TrackY: 1
-  TrackZ: 0
+  _trackedTransform: {fileID: 1755372403}
+  _trackX: 1
+  _trackY: 1
+  _trackZ: 0
 --- !u!114 &801176970
 MonoBehaviour:
   m_ObjectHideFlags: 0
