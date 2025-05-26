@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcf7219bab7fe46a1ad266029b2fee19, type: 3}
+  m_Name: Readme - 05
+  m_EditorClassIdentifier: 
+  icon: {fileID: 0}
+  title: 
+  sections:
+  - heading: License
+    text: 'Song: Escape<br>Composer: Sappheiros<br>Website: https://open.spotify.com/artist/5ZVHXQZAIn9WJXvy6qn9K0<br>License:
+      Creative Commons (BY 3.0) https://creativecommons.org/licenses/by/3.0/'
+    linkText: CC 3.0 License
+    url: https://creativecommons.org/licenses/by/3.0/
+  loadedLayout: 0

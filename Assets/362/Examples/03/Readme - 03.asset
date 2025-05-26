@@ -19,41 +19,43 @@ MonoBehaviour:
     text: While you can use references, or find objects by tag or component, it may
       sometimes be easier to find using the (controversial) Singleton pattern. This
       is achieved by creating a public static reference to the class, and assigning
-      it to the object upon creation. This allows any object in the scene to access
-      both static and nonstatic information from the class with ease.<br>Many facets
-      of your application may benefit from having a single manager coordinating larger
-      complex commands, like destroying all enemies. This can be made even more consistent
-      by creating it upon application start and setting donotdestroyonload so it
-      persists across scenes.
-    linkText: 
-    url: 
+      it to the object upon creation, or destroying the object if it finds that another
+      already exists. This allows any object in the scene to access both static and
+      nonstatic information from the class with ease.<br>Many facets of your application
+      may benefit from having a single manager (singleton or otherwise) coordinating
+      larger complex commands, like destroying all enemies. This can be made even
+      more consistent by creating it upon application start and setting donotdestroyonload
+      so it persists across scenes.
+    linkText: Singletons in Unity
+    url: https://awesometuts.com/blog/singletons-unity/
   - heading: Creating Objects
     text: Using the Instantiate command, you can create a GameObject, which will
       be returned from the function call so that it can be modified immediately following
       creation. This is a great use of Prefabs, so you can carefully construct the
       object you want to be instantiated so that it has all of the components and
       values set up ahead of time.
-    linkText: 
-    url: 
+    linkText: Instantiation Reference
+    url: https://docs.unity3d.com/6000.1/Documentation/ScriptReference/Object.Instantiate.html
   - heading: Destroying Objects
     text: Objects OR components can be disabled or destroyed. This will also activate
       the OnDestroy monobehaviour call, which can be used for any cleanup your object
       may require.
-    linkText: 
-    url: 
+    linkText: Destroy Reference
+    url: https://docs.unity3d.com/6000.1/Documentation/ScriptReference/Object.Destroy.html
   - heading: Object Pooling
     text: The creation and destruction of objects is a resource intensive operation,
       and one effective optimization is to pool these objects, meaning that they
       are reused by disabling and re-enabling them, instead of creating and destroying
       them. Unity provides an ObjectPool class to help you manage pooled objects.
-    linkText: 
-    url: 
-  - heading: UI - Canvas System
-    text: UI objects using the canvas system are children of a Canvas object. Canvas
-      objects can be in world space or a screen overlay (default) - The screen overlay
-      system uses a separate coordinate system from gameobjects, and you must consider
-      UI objects within it relative to their canvas instead of relative to their
-      world space position.
-    linkText: 
-    url: 
+    linkText: Object Pool Reference
+    url: https://docs.unity3d.com/6000.1/Documentation/ScriptReference/Pool.ObjectPool_1.html
+  - heading: Time
+    text: Time.TimeScale can be set and used to control the rate of time flow within
+      a game, directly affecting deltaTime. This can be used for slow motion, pausing,
+      or fast forwarding gameplay. Time.deltaTime is commonly used, but Time.fixedDeltaTime
+      may be more appropriate if you are working within the confines of the physics
+      system. deltaTime will be converted to fixedDeltaTime if it is accessed within
+      FixedUpdate, but it is still good to use fixedDeltaTime for clarity.
+    linkText: timeScale Reference
+    url: https://docs.unity3d.com/ScriptReference/Time-timeScale.html
   loadedLayout: 0

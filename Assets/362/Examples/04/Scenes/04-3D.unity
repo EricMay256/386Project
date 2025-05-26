@@ -476,6 +476,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door05
       objectReference: {fileID: 0}
+    - target: {fileID: 7324850970940797232, guid: 0aca85a0f871ccf4a9150d500b35612e, type: 3}
+      propertyPath: m_text
+      value: 05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7993726867260004067, guid: 0aca85a0f871ccf4a9150d500b35612e, type: 3}
+      propertyPath: sceneName
+      value: 05
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
