@@ -13,6 +13,14 @@ MonoBehaviour:
   m_Name: Readme - 12
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
-  title: 
-  sections: []
+  title: Readme - 12
+  sections:
+  - heading: Shader Graph
+    text: 
+    linkText: 
+    url: 
+  - heading: VFX Graph
+    text: 
+    linkText: 
+    url: 
   loadedLayout: 0

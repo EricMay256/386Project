@@ -14,5 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
   title: 
-  sections: []
+  sections:
+  - heading: Polybrush
+    text: 
+    linkText: 
+    url: 
+  - heading: Probuilder
+    text: 
+    linkText: 
+    url: 
+  - heading: Terrain Tools
+    text: 
+    linkText: 
+    url: 
   loadedLayout: 0

@@ -14,5 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
   title: 
-  sections: []
+  sections:
+  - heading: Profiler
+    text: 
+    linkText: Profiler introduction
+    url: https://docs.unity3d.com/Manual/profiler-introduction.html
+  - heading: Frame Debugger
+    text: 
+    linkText: Frame Debugger window reference
+    url: https://docs.unity3d.com/Manual/frame-debugger-window.html
+  - heading: Physics Debugger
+    text: 
+    linkText: 'Physics Debug window reference '
+    url: https://docs.unity3d.com/Manual/PhysicsDebugVisualization.html
+  - heading: Input Debugger
+    text: 
+    linkText: Input System Manual - Debugging
+    url: https://docs.unity3d.com/Packages/com.unity.inputsystem@1.14/manual/Debugging.html
+  - heading: Breakpoints
+    text: 
+    linkText: Debug C# code in Unity
+    url: https://docs.unity3d.com/Manual/managed-code-debugging.html
   loadedLayout: 0
