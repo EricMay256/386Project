@@ -14,5 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
   title: 
-  sections: []
+  sections:
+  - heading: Welcome!
+    text: 
+    linkText: 
+    url: 
+  - heading: 362
+    text: Example scenes and assets can be found in the 362 folder.
+    linkText: 
+    url: 
+  - heading: Settings
+    text: Various files that are used to configure build settings, the InputSystem,
+      and the UniversalRenderingPipeline (URP)
+    linkText: 
+    url: 
+  - heading: TutorialInfo
+    text: Contains the files necessary to create and display readmes like this.
+    linkText: 
+    url: 
+  - heading: TextMesh Pro
+    text: When using TextMesh Pro objects, certain files need to be included in your
+      assets folder. Unity prompts you to download them if you use TMP objects when
+      it is not installed.
+    linkText: 
+    url: 
   loadedLayout: 0
