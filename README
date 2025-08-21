@@ -11,3 +11,5 @@ helpful to be able to detect and revert changes.
 
 3. Download or select the correct version of Unity when prompted (a Long Term Support version, 56f1).
    a. You may use a newer version if you wish, but you will be responsible for any bugs, errors, or future version changes if you go that route.
+
+4. You should nearly always be working from the Assets directory within Unity, which is where you will find all relevant class content.
