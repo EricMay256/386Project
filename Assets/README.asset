@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fcf7219bab7fe46a1ad266029b2fee19, type: 3}
-  m_Name: README
+  m_Name: Readme
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
   title: 
@@ -35,7 +35,8 @@ MonoBehaviour:
   - heading: TextMesh Pro
     text: When using TextMesh Pro objects, certain files need to be included in your
       assets folder. Unity prompts you to download them if you use TMP objects when
-      it is not installed.
+      it is not installed. You will be met with a popup prompting you to "Import
+      TMP Essentials" when you first add or change a TextMesh Pro based object.
     linkText: 
     url: 
   loadedLayout: 0
