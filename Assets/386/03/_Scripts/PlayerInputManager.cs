@@ -24,10 +24,20 @@ public class PlayerInputManager : MonoBehaviour
   public bool PausePressed { get; private set; }
   public bool PauseHeld { get; private set; }
   public bool PauseReleased { get; private set; }
+  public bool GroundPressed { get; private set; }
+  public bool GroundHeld { get; private set; }
+  public bool GroundReleased { get; private set; }
+  public bool DamagePressed { get; private set; }
+  public bool DamageHeld { get; private set; }
+  public bool DamageReleased { get; private set; }
+  public bool WallslidePressed { get; private set; }
+  public bool WallslideHeld { get; private set; }
+  public bool WallslideReleased { get; private set; }
   private InputAction _attackAction, _jumpAction, _interactAction, _crouchAction, _sprintAction;
   private InputAction _pauseActionPlayer, _pauseActionUI;
   private InputAction _movementAction, _lookAction;
-  private PlayerInput _playerInput;
+  private InputAction _groundAction, _damageAction, _wallslideAction;
+  public PlayerInput PlayerInput { get; private set; }
   // Start is called once before the first execution of Update after the MonoBehaviour is created
   void Awake()
   {
@@ -39,20 +49,23 @@ public class PlayerInputManager : MonoBehaviour
     {
       Destroy(gameObject);
     }
-    _playerInput = GetComponent<PlayerInput>();
+    PlayerInput = GetComponent<PlayerInput>();
   }
 
   void Start()
   {
-    _movementAction = _playerInput.actions["Move"];
-    _lookAction = _playerInput.actions["Look"];
-    _attackAction = _playerInput.actions["Attack"];
-    _jumpAction = _playerInput.actions["Jump"];
-    _interactAction = _playerInput.actions["Interact"];
-    _crouchAction = _playerInput.actions["Crouch"];
-    _sprintAction = _playerInput.actions["Sprint"];
-    _pauseActionPlayer = _playerInput.actions["Player/Pause"];
-    _pauseActionUI = _playerInput.actions["UI/Pause"];
+    _movementAction = PlayerInput.actions["Move"];
+    _lookAction = PlayerInput.actions["Look"];
+    _attackAction = PlayerInput.actions["Attack"];
+    _jumpAction = PlayerInput.actions["Jump"];
+    _interactAction = PlayerInput.actions["Interact"];
+    _crouchAction = PlayerInput.actions["Crouch"];
+    _sprintAction = PlayerInput.actions["Sprint"];
+    _pauseActionPlayer = PlayerInput.actions["Player/Pause"];
+    _pauseActionUI = PlayerInput.actions["UI/Pause"];
+    _groundAction = PlayerInput.actions["Ground"];
+    _damageAction = PlayerInput.actions["Damage"];
+    _wallslideAction = PlayerInput.actions["Wallslide"];
   }
 
   // Update is called once per frame
@@ -78,6 +91,17 @@ public class PlayerInputManager : MonoBehaviour
     SprintHeld = _sprintAction.IsPressed();
     SprintReleased = _sprintAction.WasReleasedThisFrame();
 
+    GroundPressed = _groundAction.WasPressedThisFrame();
+    GroundHeld = _groundAction.IsPressed();
+    GroundReleased = _groundAction.WasReleasedThisFrame();
+
+    DamagePressed = _damageAction.WasPressedThisFrame();
+    DamageHeld = _damageAction.IsPressed();
+    DamageReleased = _damageAction.WasReleasedThisFrame();
+
+    WallslidePressed = _wallslideAction.WasPressedThisFrame();
+    WallslideHeld = _wallslideAction.IsPressed();
+    WallslideReleased = _wallslideAction.WasReleasedThisFrame();
 
     PausePressed = _pauseActionPlayer.WasPressedThisFrame() || _pauseActionUI.WasPressedThisFrame();
     PauseHeld = _pauseActionPlayer.IsPressed() || _pauseActionUI.IsPressed();

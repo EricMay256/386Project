@@ -34,15 +34,15 @@ public class AnimatorControls : MonoBehaviour
             _sr.flipX = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.H))
+        if (PlayerInputManager.Instance.DamagePressed)
         {
             TakeDamage();
         }
-        if (Input.GetKeyDown(KeyCode.G))
+        if (PlayerInputManager.Instance.GroundPressed)
         {
             _animator.SetBool("IsGrounded", true);
         }
-        if (Input.GetKeyDown(KeyCode.J))
+        if (PlayerInputManager.Instance.WallslidePressed)
         {
             _animator.SetBool("WallSliding", !_animator.GetBool("WallSliding"));
         }

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fcf7219bab7fe46a1ad266029b2fee19, type: 3}
-  m_Name: Readme
+  m_Name: README_
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
   title: 
@@ -19,8 +19,12 @@ MonoBehaviour:
     text: 
     linkText: 
     url: 
-  - heading: 362
+  - heading: 386
     text: Example scenes and assets can be found in the 362 folder.
+    linkText: 
+    url: 
+  - heading: Samples
+    text: Folder used by Unity to import usage samples for various Packages
     linkText: 
     url: 
   - heading: Settings

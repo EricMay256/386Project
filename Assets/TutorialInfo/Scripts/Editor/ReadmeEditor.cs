@@ -59,28 +59,14 @@ public class ReadmeEditor : Editor
   {
     if (!SessionState.GetBool(s_ShowedReadmeSessionStateName, false))
     {
-      var readme = SelectReadme();
+      SelectReadme();
       SessionState.SetBool(s_ShowedReadmeSessionStateName, true);
-
-      if (readme && !readme.loadedLayout)
-      {
-        LoadLayout();
-        readme.loadedLayout = true;
-      }
     }
-  }
-
-  static void LoadLayout()
-  {
-    var assembly = typeof(EditorApplication).Assembly;
-    var windowLayoutType = assembly.GetType("UnityEditor.WindowLayout", true);
-    var method = windowLayoutType.GetMethod("LoadWindowLayout", BindingFlags.Public | BindingFlags.Static);
-    method.Invoke(null, new object[] { Path.Combine(Application.dataPath, "TutorialInfo/Layout.wlt"), false });
   }
 
   static Readme SelectReadme()
   {
-    var ids = AssetDatabase.FindAssets("Readme t:Readme");
+    var ids = AssetDatabase.FindAssets("Readme_ t:Readme");
     if (ids.Length == 1)
     {
       var readmeObject = AssetDatabase.LoadMainAssetAtPath(AssetDatabase.GUIDToAssetPath(ids[0]));
@@ -158,11 +144,6 @@ public class ReadmeEditor : Editor
 
       GUILayout.Space(k_Space);
     }
-
-    // if (GUILayout.Button("Remove Readme Assets", ButtonStyle))
-    // {
-    //     RemoveTutorial();
-    // }
   }
 
   bool m_Initialized;
