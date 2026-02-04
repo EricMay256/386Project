@@ -11,6 +11,14 @@ public class SimpleTopDownMovement : MonoBehaviour
   {
     _moveInput = value.Get<Vector2>();
   }
+  public void OnAttack()
+  {
+    Debug.Log("Attack!");
+  }
+  public void OnEmote(InputValue value)
+  {
+    Debug.Log("Emote!");//: " + value.Get<float>());
+  }
 
   void Update()
   {
