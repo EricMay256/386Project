@@ -259,6 +259,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2679186022557400238, guid: 481001c33401c6e4c96f01a98b2ef919, type: 3}
   m_PrefabInstance: {fileID: 9070664432886962839}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &629355227 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7656513689827942859, guid: f3f81737789c64245bf5c7f36958f5c6, type: 3}
+  m_PrefabInstance: {fileID: 6170011549276200122}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &845523464
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,7 +1035,10 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 529180385530503170, guid: f3f81737789c64245bf5c7f36958f5c6, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7656513689827942859, guid: f3f81737789c64245bf5c7f36958f5c6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9172249549829135526}
   m_SourcePrefab: {fileID: 100100000, guid: f3f81737789c64245bf5c7f36958f5c6, type: 3}
 --- !u!1001 &6695262654769821919
 PrefabInstance:
@@ -1203,7 +1211,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7559426017410409657, guid: f3f81737789c64245bf5c7f36958f5c6, type: 3}
   m_PrefabInstance: {fileID: 6170011549276200122}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 629355227}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b6db5ef4b5f97b4ea926014e50f48bc, type: 3}
@@ -1214,6 +1222,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6605969560991352339, guid: f3f81737789c64245bf5c7f36958f5c6, type: 3}
   m_PrefabInstance: {fileID: 6170011549276200122}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9172249549829135526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629355227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47746beb5a34bee4fb384d2808506809, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimescaleControl
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
