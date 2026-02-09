@@ -36,6 +36,8 @@ namespace CPSC386
     [SerializeField]
     private bool _logUpdate = true;
 
+    private bool nonSerializedBoolean = false;
+
     //Using this functionality, we can create methods that can be executed on command from the editor
     //The context menu entry will be available when right clicking the component's header in the inspector
     [ContextMenu("Randomize Color")]

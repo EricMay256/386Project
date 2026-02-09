@@ -27,7 +27,7 @@ public class SceneTransition : MonoBehaviour
   }
   void OnControllerColliderHit(ControllerColliderHit hit)
   {
-    Debug.Log($"Trigger2D: {hit.gameObject.name}");
+    Debug.Log($"ColliderHit: {hit.gameObject.name}");
     OpenSceneForPlayer(hit.gameObject);
   }
   public void OpenSceneForPlayer(GameObject player)
