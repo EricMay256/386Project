@@ -36,7 +36,7 @@ namespace CPSC386
     [SerializeField]
     private bool _logUpdate = true;
 
-    private bool nonSerializedBoolean = false;
+    private bool _nonSerializedBoolean = false;
 
     //Using this functionality, we can create methods that can be executed on command from the editor
     //The context menu entry will be available when right clicking the component's header in the inspector
@@ -52,6 +52,8 @@ namespace CPSC386
       Debug.Log("Start");
       GetComponent<SpriteRenderer>().color = _color;
       transform.localScale = new Vector3(_scale, _scale, 1);
+      if(_nonSerializedBoolean)
+        Debug.Log("You have to change the value of the variable in code or make it serializable to reach this statement.");
     }
 
     void Awake()
