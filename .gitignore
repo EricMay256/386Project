@@ -77,3 +77,4 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 Assets/TextMesh Pro.meta
 Assets/Temp.meta
+*.slnx
