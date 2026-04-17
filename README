@@ -5,7 +5,7 @@ Each lesson is a self-contained scene that introduces new Unity concepts
 through a working example, building progressively toward a complete 2D game.
 
 > **If you're here from class:** open the project in Unity, navigate to
-> `Assets/386/`, and start at the scene for your current lesson.
+> `Assets/GameDevIntro/`, and start at the scene for your current lesson.
 > Each folder contains a scene and a `Readme` asset — open it in the
 > Inspector for the lesson's notes and reference links.
 
