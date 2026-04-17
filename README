@@ -1,15 +1,104 @@
-This repository is a project for Unity 6 LTS (6000.3.4f1) that contains class material and examples for CPSC 386.
-You are encouraged to use the objects and code to learn from, and expand upon.
+# Intro Game Dev Course
 
-In order to open this within unity, please:
-1. Clone this repository using git
-   a. While you may find downloading a zip more convenient, using git clone will enable you to pull any future updates, and will be necessary for
-a suitable workflow within your Unity projects where you are required to use git. It is very easy to make unintended changes in Unity, and it is
-helpful to be able to detect and revert changes.
+A Unity project built for hands-on introduction to game development.
+Each lesson is a self-contained scene that introduces new Unity concepts
+through a working example, building progressively toward a complete 2D game.
 
-2. In Unity Hub, select "Add" -> "Add Project From Disk" and navigate to the location of this directory, select OK
+> **If you're here from class:** open the project in Unity, navigate to
+> `Assets/386/`, and start at the scene for your current lesson.
+> Each folder contains a scene and a `Readme` asset — open it in the
+> Inspector for the lesson's notes and reference links.
 
-3. Download or select the correct version of Unity when prompted (a Long Term Support version, 6000.3.4f1).
-   a. You may use a newer, non LTS version if you wish, but you will be responsible for any bugs, errors, or future version changes if you go that route.
+---
 
-4. You should nearly always be working from the Assets directory within Unity, which is where you will find all relevant class content.
+## What This Project Covers
+
+| Lesson | Topics |
+|--------|--------|
+| 01 | Unity Editor orientation · GameObjects & components · Inspector · Render order · Play mode |
+| 02 | Physics · Rigidbody2D · Colliders · Triggers · Prefabs |
+| 03 | Scripting patterns · Object pooling · Time & deltaTime · Coroutines |
+| 04 | Scene transitions · Tilemaps · UI Canvas system · 3D basics · Materials & lighting |
+| 05 | Audio (AudioSource, AudioMixer) · ScriptableObjects · Settings persistence (PlayerPrefs) |
+| 06 | *(extend lesson 04 — scene navigation challenge)* |
+| 07 | *(extend lesson 04 — scene navigation challenge)* |
+| 08 | Genre exploration: platformers · top-down · FPS · RPG combat · dialogue · inventory |
+| 09 | *(advanced topics)* |
+| 10 | Debugging tools: Profiler · Frame Debugger · Physics Debugger · Input Debugger · breakpoints |
+| 11 | *(advanced topics)* |
+| 12 | Multiplayer basics · NetworkManager · Input System (PlayerInputManager) |
+
+Lessons assume general programming competency in C# or a comparable language,
+but no prior Unity or game development experience.
+
+---
+
+## Getting Started
+
+**Requirements**
+- Unity 6 LTS (or the version specified by your instructor)
+- Universal Render Pipeline (URP) — included with the project
+
+**Steps**
+1. Clone or download this repository.
+   - I strongly encourage you to invest a little time to ensure version
+   control is working on your projects, if not this tutorial project.
+2. Open the project in Unity Hub. (select "Add" -> "Add Project From Disk")
+3. In the Project browser, navigate to `Assets/GameDevIntro/`.
+4. Open the scene folder for your current lesson (e.g. `01/01.unity`).
+5. Select the `Readme` asset in that folder and read it in the Inspector
+   before touching anything else.
+
+Each scene is a snapshot of a particular state of the game. Later scenes
+build on earlier ones, so if something looks unfamiliar, the earlier lesson
+where it was introduced is a good reference point.
+
+---
+
+## Project Structure
+
+```
+Assets/
+├── GameDevIntro/
+│   ├── 01/          # Lesson 01 scene + Readme + Assets
+│   ├── 02/          # Lesson 02 scene + Readme + Assets
+│   ├── ...
+│   └── 12/          # Lesson 12 scene + Readme + Assets
+└── ...              # Shared assets (sprites, prefabs, audio, scripts)
+```
+
+The in-scene `Readme` assets are the primary documentation for each lesson.
+They contain explanations, common pitfalls, and links to the relevant
+Unity documentation — read them in the Inspector, not as raw `.asset` files.
+
+---
+
+## A Note on the Readme Assets
+
+Each lesson folder contains a custom `Readme` asset that renders as a
+formatted panel in the Unity Inspector. If it's showing up as raw YAML
+instead, make sure the `TutorialInfo` scripts in the project are compiled.
+Reopening the project or triggering a recompile (adding a blank line to
+any `.cs` file and saving) usually resolves this.
+
+---
+
+## Working on Your Own Game
+
+If you get stuck:
+- Check the Readme for that lesson's reference links first.
+- Search the Unity documentation at [docs.unity3d.com](https://docs.unity3d.com).
+- The comments in the tutorial scripts are there to explain decisions, not
+  just describe what the code does — they're worth reading.
+- There is a tremendous amount of third party resources - articles, videos, forum
+  posts, and more - that you are encouraged to take advantage of. You don't have
+  to reinvent every wheel you choose to  work with.
+
+---
+
+## License
+
+This project is released under the MIT license, view LICENSE.md for full details.
+
+The music used in lesson 05 is licensed under Creative Commons (BY 3.0):
+*Escape* by Sappheiros — [CC 3.0 License](https://creativecommons.org/licenses/by/3.0/)
